@@ -14,9 +14,14 @@ module.exports = {
                 loader: 'url-loader',
                 options: {
                     name: '[name].[ext]',
-                    outputPath: 'img/'
+                    outputPath: 'img/',
+                    limit: 20480
                 }
             }
+        },
+        {
+            test: /\.scss$/,
+            use: ['style-loader', 'css-loader', 'sass-loader', 'postcss-loader']
         }]
     }
 }

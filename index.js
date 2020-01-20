@@ -1,6 +1,8 @@
 import src from "./img/1.png"
-const img = new Image();
+import "./index.scss";
 
+const img = new Image();
+img.className = "avatar";
 img.src = src;
 
 document.body.append(img);
